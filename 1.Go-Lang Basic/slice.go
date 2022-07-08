@@ -44,4 +44,26 @@ func main() {
 	slice46 = append(slice46, "New Saturday") /// Will replace index 6
 	fmt.Println("slice46 : ", slice46)
 	fmt.Println("days : ", days) //[Sunday Monday TuesdayX Wednesday Thursday Friday New Saturday]
+
+	// Create new slice as copy source
+	newSlice := make([]string, 2, 6)
+	newSlice[0] = "Lazycat"
+	newSlice[1] = "Labs"
+
+	fmt.Println(newSlice)
+
+	// Create copy slice as copy destination
+	copySlice := make([]string, len(newSlice), cap(newSlice))
+
+	copy(copySlice, newSlice)
+
+	fmt.Println(copySlice)
+
+	// Another way create and copy slice
+	newSliceX := []string{"LazycatX", "LabsX"}
+
+	copySliceX := []string{"", ""}
+
+	copy(copySliceX, newSliceX)
+	fmt.Println(copySliceX)
 }
