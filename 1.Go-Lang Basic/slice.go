@@ -33,9 +33,9 @@ func main() {
 	fmt.Println("slice5 : ", slice5)
 
 	// Append if slice is full capacity
-	slice5 = append(slice5, "New day")
-	fmt.Println("slice5 : ", slice5) //[Saturday New day] Will create new array
-	fmt.Println("days : ", days)     // array days not effected because when append slice is full capacity
+	slice5 = append(slice5, "New day") // Will create new array because slice is full capacity
+	fmt.Println("slice5 : ", slice5)   //[Saturday New day]
+	fmt.Println("days : ", days)       // array days not effected because when append slice is full capacity
 
 	var slice46 = days[4:6]
 	fmt.Println("slice46 : ", slice46)
