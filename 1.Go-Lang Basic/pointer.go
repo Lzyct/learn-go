@@ -6,6 +6,14 @@ type GithubData struct {
 	UserName, Name, Email string
 }
 
+/**
+Recommended using pointer struct on function
+to avoid memory leak
+*/
+func updateEmail(githubData *GithubData) {
+	githubData.Email = "ukie.tux@gmail.com"
+}
+
 func main() {
 	// by default in Go Lang is "pass by value"
 	user1 := GithubData{"Lzyct", "Mudassir", "hey.mudassir@gmail.com"}
@@ -60,4 +68,11 @@ func main() {
 	fmt.Println("===============================")
 	fmt.Println("userStruct5 :", user5Struct)
 	fmt.Println("userStruct6 :", user6Struct)
+
+	// Pointer in function
+	user7 := GithubData{"Lzyct", "Mudassir", ""}
+	fmt.Println("===============================")
+	fmt.Println("user7 :", user7)
+	updateEmail(&user7)
+	fmt.Println("user7 :", user7)
 }
