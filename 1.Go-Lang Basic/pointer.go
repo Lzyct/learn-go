@@ -46,6 +46,7 @@ func main() {
 
 	// create new pointer
 	user5 := &GithubData{"Lazycat Labs", "Mudassir", "hey.mudassir@gmail.com"}
+	// create new empty pointer
 	user6 := new(GithubData)
 
 	fmt.Println("===============================")
