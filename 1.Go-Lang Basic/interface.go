@@ -17,10 +17,12 @@ type Animal struct {
 	Name string
 }
 
+// Implement GithubInterface
 func (githubUsername GithubUsername) GetUserName() string {
 	return githubUsername.Name
 }
 
+// Implement GithubInterface
 func (animal Animal) GetUserName() string {
 	return animal.Name
 }
