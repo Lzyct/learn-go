@@ -10,6 +10,7 @@ type User struct {
 	Age      int
 }
 
+// the list must be "type"
 type UserSlice []User
 
 func (user UserSlice) Len() int {
