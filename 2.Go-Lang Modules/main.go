@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/Lzyct/go-mod-hello"
+	gomodhello "github.com/Lzyct/go-mod-hello/v2"
 )
 
 func main() {
-	fmt.Println(gomodhello.Whatsup("Lzyct"))
+	fmt.Println(gomodhello.Whatsup("Lzyct", "Labs"))
 }

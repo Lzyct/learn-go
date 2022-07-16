@@ -2,3 +2,5 @@ github.com/Lzyct/go-mod-hello v1.0.0 h1:9+AsUIPk+5dsDvo57qJ/HwRFxXoNG3v8M2WpyoZ1
 github.com/Lzyct/go-mod-hello v1.0.0/go.mod h1:QzFgar3mfGN2vFUAn/dYMFG4Eq7wybpr/5wM7Tqujn4=
 github.com/Lzyct/go-mod-hello v1.1.0 h1:nTuVTxOc5mb4YyORFGJPHabNqVyzDIZGeupLXnQTGCw=
 github.com/Lzyct/go-mod-hello v1.1.0/go.mod h1:QzFgar3mfGN2vFUAn/dYMFG4Eq7wybpr/5wM7Tqujn4=
+github.com/Lzyct/go-mod-hello/v2 v2.0.0 h1:gjsyH3NnnI13VXTU7MtbuZ2xQsE1hPdnHm7tM+lg2CU=
+github.com/Lzyct/go-mod-hello/v2 v2.0.0/go.mod h1:yOiniCPmB1AjYBnd27CPHECWw56TA5I7Tf21ufZSqdU=
