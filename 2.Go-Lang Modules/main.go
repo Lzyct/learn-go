@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	gomodhello "github.com/Lzyct/go-mod-hello"
+	"github.com/Lzyct/go-mod-hello"
 )
 
 func main() {
