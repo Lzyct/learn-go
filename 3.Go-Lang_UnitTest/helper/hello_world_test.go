@@ -9,6 +9,13 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// Only work on current package
+func TestMain(m *testing.M) {
+	println("Initialize script before run Unit Test")
+	m.Run()
+	println("Clean up after unit test")
+}
+
 func TestSkip(t *testing.T) {
 	if runtime.GOOS == "darwin" {
 		t.Skip("Can't run on Mac OS")
