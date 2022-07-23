@@ -9,6 +9,54 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestTableHelloWorld(t *testing.T) {
+	tests := []struct {
+		name, request, expected string
+	}{
+		{
+			name:     "Lzyct",
+			request:  "Lzyct",
+			expected: "Hello Lzyct",
+		},
+		{
+			name:     "Labs",
+			request:  "Labs",
+			expected: "Hello Labs",
+		},
+	}
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			result := HelloWorld(test.request)
+
+			// Using FailNow
+			require.Equal(t, test.expected, result, "The result must be "+test.expected)
+
+		})
+	}
+}
+
+func TestSubTest(t *testing.T) {
+	// To run specific sub unit test
+	// go test -v -run=MainFunction/SubFunction
+	// go test -v -run=TestSubTest/Lzyct
+	t.Run("Lzyct", func(t *testing.T) {
+		result := HelloWorld("Lzyct")
+
+		// Using Fail
+		assert.Equal(t, "Hello Lzyct", result, " The result must be Hello Lzyct")
+
+	})
+
+	t.Run("Labs", func(t *testing.T) {
+		result := HelloWorld("Labs")
+
+		// Using FailNow
+		require.Equal(t, "Hello Labs", result, "The result must be Hello Labs")
+
+	})
+}
+
 // Only work on current package
 func TestMain(m *testing.M) {
 	println("Initialize script before run Unit Test")
