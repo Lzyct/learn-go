@@ -9,6 +9,18 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func BenchmarkHelloLzyct(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("Lzyct")
+	}
+}
+
+func BenchmarkHelloLabs(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("Labs")
+	}
+}
+
 func TestTableHelloWorld(t *testing.T) {
 	tests := []struct {
 		name, request, expected string
