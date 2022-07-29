@@ -6,6 +6,18 @@ import (
 	"time"
 )
 
+func DisplayNumber(number int) {
+	fmt.Println("Number ", number)
+}
+
+func TestManyGoroutine(t *testing.T) {
+	for i := 0; i < 100000; i++ {
+		go DisplayNumber(i)
+	}
+
+	time.Sleep(10 * time.Second)
+}
+
 func HelloLzyct() {
 	fmt.Println("Hello Lzycat")
 }
@@ -20,5 +32,5 @@ func TestCreateGoroutine(t *testing.T) {
 
 	// Result:
 	// Labs
-	// Hello Lzycat
+	// Hello Lzyc
 }
